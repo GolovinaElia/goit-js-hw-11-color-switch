@@ -18,13 +18,33 @@ const colors = [
 
 const startBtn = document.querySelector('button[data-action="start"]');
 const stopBtn = document.querySelector('button[data-action="stop"]');
+const body = document.querySelector('body');
 
+const color = {
+  colorID: null,
+  isActive: false
+};
 startBtn.addEventListener('click', () => {
   const randomIntegerFromInterval = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
-    setTimeout(() => {
-        console.log('Start');
-    }, 1000);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
 });
-//  stopBtn.addEventListener('click');
+
+
+// startBtn.addEventListener('click', () => {
+//   const randomIntegerFromInterval = (min, max) => {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// };
+//   const timerId = setInterval(() => {
+//         console.log('Start');
+//     }, 1000);
+// });
+// stopBtn.addEventListener('click', () => {
+//   console.log('Stop');
+//   // clearInterval(timerId);
+//  });
+
+// function changeColor(colors) {
+//   body.style.backgroundColor = selectColor;
+//    const selectColor = colors.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
+// };
