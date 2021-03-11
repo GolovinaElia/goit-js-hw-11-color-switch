@@ -31,6 +31,7 @@ const color = {
     this.intervalId = setInterval(randomInx => {
       randomInx = randomIntegerFromInterval(0, 5);
       changeColor(colors[randomInx]);
+      startBtn.disabled
     }, 1000);
   },
   
