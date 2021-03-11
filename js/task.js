@@ -21,28 +21,28 @@ const color = {
     this.isActive = true;
 
     const randomIntegerFromInterval = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-      };
-    
-    function changeColor(color) {
-    bodyId.style.backgroundColor = color;
+      return Math.floor(Math.random() * (max - min + 1) + min);
     };
-    
+
+    function changeColor(color) {
+      bodyId.style.backgroundColor = color;
+      startBtn.disabled
+    };
+
     this.intervalId = setInterval(randomInx => {
       randomInx = randomIntegerFromInterval(0, 5);
       changeColor(colors[randomInx]);
-      startBtn.disabled
     }, 1000);
   },
-  
+
   stop() {
     clearInterval(this.intervalId);
     this.isActive = false;
-},
+  },
 };
 startBtn.addEventListener('click', () => {
   color.start();
 });
 stopBtn.addEventListener('click', () => {
   color.stop();
- });
+});
