@@ -19,14 +19,13 @@ const color = {
       return;
     }
     this.isActive = true;
-
     const randomIntegerFromInterval = (min, max) => {
       return Math.floor(Math.random() * (max - min + 1) + min);
     };
 
     function changeColor(color) {
+      startBtn.disabled = true;
       bodyId.style.backgroundColor = color;
-      startBtn.disabled
     };
 
     this.intervalId = setInterval(randomInx => {
@@ -38,6 +37,7 @@ const color = {
   stop() {
     clearInterval(this.intervalId);
     this.isActive = false;
+    startBtn.disabled = false;
   },
 };
 startBtn.addEventListener('click', () => {
