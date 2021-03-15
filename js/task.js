@@ -22,9 +22,8 @@ const color = {
     const randomIntegerFromInterval = (min, max) => {
       return Math.floor(Math.random() * (max - min + 1) + min);
     };
-
+    startBtn.disabled = true;
     function changeColor(color) {
-      startBtn.disabled = true;
       bodyId.style.backgroundColor = color;
     };
 
